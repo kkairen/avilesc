@@ -50,8 +50,8 @@ clear:both;
  background-color:lightyellow;
  text-align:center; 
  z-index:10;
- font-family: 'Amatic SC', cursive;
- /*font-family: 'JustLettersMedium'; */
+ /*font-family: 'Amatic SC', cursive; */
+ font-family: 'JustLettersMedium'; 
  font-weight: normal; 
  font-style: normal; 
  font-size:36px;
