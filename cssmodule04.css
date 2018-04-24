@@ -66,5 +66,9 @@ footer {
 
 #feature {
 	background-color: #adadad;
-	background-image: url("/avilesc/images/FishermanAtSea.jpg");
+}
+
+#feature img{
+	max-height: 100%;
+	float: right;
 }
