@@ -38,36 +38,33 @@ nav, footer {
 				padding: 0.5em 0;
 }
 #feature, article {
-				height: 10em;
-				margin-bottom: 1em;
-				background-color: #efefef;
+	height: 10em;
+	margin-bottom: 1em;
+	background-color: #efefef;
         overflow: auto;
 }
 
-#feature img{
-  max-width: 100%;
-  
-}
 nav {
-  background-color: #dcdcdc;
+	background-color: #dcdcdc;
 }
 
 footer {
-  background-color: #000000;
+	background-color: #000000;
 }
 
 .column1 {
-  background-color: #262626;
+	background-color: #262626;
 }
 
 .column2 {
-  background-color: #555555;
+	background-color: #555555;
 }
 
 .column3 {
-  background-color: #7c7c7c;
+	background-color: #7c7c7c;
 }
 
 #feature {
-  background-color: #adadad;
+	background-color: #adadad;
+	background-image: url("/avilesc/images/FishermanAtSea.jpg");
 }
