@@ -1,0 +1,169 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	background-image: url("concrete-texture/concrete-texture/concrete-texture.png");
+}
+
+
+/* Main Page */
+
+#topbar {
+	width: 100%;
+	height: 120px;
+	background-color: #222222;
+}
+
+#title {
+	font-family: 'Abril Fatface', cursive;
+	text-transform: lowercase;
+	padding-top: 20px;
+	padding-left: 20px;
+	font-size: 45px;
+	color: #cccccc;
+}
+
+nav {
+	list-style: none;
+	margin-top: -20px;
+	font-family: 'Rajdhani', sans-serif;
+	text-transform: uppercase;
+	margin-left: 100px;
+}
+
+nav li{
+	float: center;
+	position: relative;
+	display: inline;
+	margin-right: 10px;
+}
+
+nav a{
+	text-decoration: none;
+	display: inline-block;
+	color: #cccccc;
+}
+
+nav a:hover{
+	text-decoration: none;
+	display: inline-block;
+	color: red;
+}
+
+nav ul {
+	list-style: none;
+	position: absolute;
+}
+
+#topimage {
+	width: 80%;
+	height: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+#topimage img{
+	width: 100%;
+	height: 350px;
+}
+
+
+
+#maindesc{
+	width: 500px;
+	text-transform: lowercase;
+	font-size: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+footer {
+	width: 100%;
+	height: 50px;
+	background: #222222;
+	bottom: 0px;
+}
+
+#contactme {
+	float: right;
+	margin-right: 20px;
+	font-size: 10px;
+	color: #eeeeee;
+	margin-top: 20px;
+}
+
+.infoyo {
+	width: 70%;
+	font-size: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#grid {
+	width: 80%;
+	height: auto;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 250px;
+}
+
+.boxelement {
+	width:250px;
+	height: 250px;
+	text-align: center;
+	margin-left: 10px;
+	float: left;
+}
+
+.boxelement img{
+	width: 40px;
+	height: auto;
+	align: center;
+}
+
+.boxelement h2{
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+
+.boxelement p{
+	font-size: 10px;
+	text-tranform: lowercase;
+}
+
+#credit {
+	text-transform: lowercase;
+	float: right;
+	margin-bottom: 30px;
+	font-size: 10px;
+}
+
+#credit a{
+	text-decoration: none;
+	color: #eeeeee;
+}
+
+#container{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.video {
+	width: 25%;
+	height: auto;
+	float: left;
+	margin-right: 25%;
+}
+
+#container img{
+	width: 25%;
+	height: auto;
+	float: right;
+}
