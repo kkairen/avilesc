@@ -85,6 +85,7 @@ footer {
 	height: 50px;
 	background: #222222;
 	bottom: 0px;
+	position: fixed;
 }
 
 #contactme {
