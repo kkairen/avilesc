@@ -17,7 +17,7 @@ function ValidateForm(){
   //Required Characters, No More than 20
   var firstname = document.getElementById("firstname").value;
     console.log(letters.test(firstname))
-  if (firstname===null || firstname == "" || firstname > 20 || letters.test(firstname) )
+  if (firstname===null || firstname == "" || firstname > 20 || letters.test(firstname))
     errorMessages = "<p>The first name must be entered or must be under 20 characters</p>";
   else
     validFirstname = true;
@@ -54,7 +54,7 @@ function ValidateForm(){
   // USERNAME
   // Require Characters, No more than 12
   var username = document.getElementById("username").value;
-  if(username===null || username == "" || username > 12)
+  if(username===null || username == "" || username > 12 || username.length > 1)
     errorMessages += "<p>Invalid username entered</p>"
   else
     validUsername = true;
@@ -62,7 +62,7 @@ function ValidateForm(){
   // PASSWORD 
   // Require Character, No more than 7
   var password = document.getElementById("password").value;
-  if(password===null || password == "" || password > 7)
+  if(password===null || password == "" || password > 7 || password.length > 1)
     errorMessages += "<p>Invalid password entered</p>";
   else
     validPassword = true;
