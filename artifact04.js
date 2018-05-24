@@ -54,7 +54,7 @@ function ValidateForm(){
   // USERNAME
   // Require Characters, No more than 12
   var username = document.getElementById("username").value;
-  if(username===null || username == "" || username > 12 || username.length > 1)
+  if(username===null || username == "" || username > 12 || username.length < 1)
     errorMessages += "<p>Invalid username entered</p>"
   else
     validUsername = true;
@@ -62,7 +62,7 @@ function ValidateForm(){
   // PASSWORD 
   // Require Character, No more than 7
   var password = document.getElementById("password").value;
-  if(password===null || password == "" || password > 7 || password.length > 1)
+  if(password===null || password == "" || password > 7 || password.length < 1)
     errorMessages += "<p>Invalid password entered</p>";
   else
     validPassword = true;
@@ -103,6 +103,8 @@ function ValidateForm(){
       else
         validZipcode = true;
     }
+  else
+    validZipcode = true;
   
   document.getElementById("errorMessages").innerHTML = errorMessages;
   // Make sure you return all the boolean variables that are checking each field
