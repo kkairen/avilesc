@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="data-remix-projectId" content="478560">
+  <meta name="Title" content="Rhombus (remix)">
+  <meta name="Author" content="Coral Aviles">
+    <meta name="description" content="Artifact 3 - Rhombus Example">
+    <meta charset="utf-8">
+    <title>Artifact 3 - Rhombus</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="artifact03.js"></script>
+</head>
+  <body>
+    <label>What is the size of Rhombus?</label><br>
+    <input type="text" id="rHeight" value="4" size="5">
+    <br>
+    <label>Choose color for Even position</label><br>
+    <select id="colorEven">
+      <option value="#D2B4DE">Lilac</option>
+      <option value="#F1948A">Rose</option>
+      <option value="#AED6F1">Daylight</option> 
+    </select><br> 
+
+    <label>Choose color for Odd position</label><br>
+    <select id="colorOdd">
+      <option value="#A2D9CE">Seafoam</option>
+      <option value="#F0B27A">Sunset</option>
+      <option value=" #CD6155">Brick</option> 
+    </select>
+    <br>
+    <label>Type a symbol for Rhombus</label><br>
+    <input type="text" id="symbol" value="%" size="5">
+    <!--
+<select id="symbol">
+<option value="*">*</option>
+<option value="$">$</option>
+<option value="@">@</option> 
+</select> !-->
+    <br><br>
+    <button onclick="createRhombus(document.getElementById('rHeight').value,
+                     document.getElementById('colorEven').value,
+                     document.getElementById('colorOdd').value,
+                     document.getElementById('symbol').value);">Display Rhombus</button>
+
+    <div class="clear"></div>
+
+    <div id="upLeft">Rhombus</div>
+    <div id="upRight"></div>
+
+    <div class="clear"></div>
+
+
+    <div id="downLeft"></div> 
+    <div id="downRight"></div>
+
+  </body>
+</html>
