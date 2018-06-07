@@ -1,66 +1,72 @@
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-  <meta name="description" content="Contact">
-  <meta name="viewport" content="width=device-width">
-	
-	<title>Contact Me</title>
-	
-	<link href="home.css" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Contact">
+    <meta name="viewport" content="width=device-width">
 
-<body>
-	<!-- TOPBAR !-->
-	<div id="topbar">
-		<div id="title">iced pandas</div>
-		<nav>
-			<ul>
-				<li><a href="index.html">index</a></li>
-				<li><a href="about.html">about</a></li>
-				<li><a href="coursework.html">coursework</a></li>
-				<li><a href="artifacts.html">artifacts</a></li>
-				<li><a href="modules.html">module assignments</a></li>
-				<li><a href="contact.html">contact</a></li>
-				<li><a href="portfolio.html">portfolio</a></li>
-			</ul>
-		</nav>
-	</div>
-	
-	<!-- MAIN STUFF !-->
-	
-	<h1>Contact</h1>
-	<div id="container">
-	<form action="thanks.html" method="get">
+    <title>Contact Me</title>
+
+    <link href="home.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- TOPBAR !-->
+    <div id="topbar">
+      <div id="title">iced pandas</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">index</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="coursework.html">coursework</a></li>
+          <li><a href="artifacts.html">artifacts</a></li>
+          <li><a href="modules.html">module assignments</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <li><a href="portfolio.html">portfolio</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- MAIN STUFF !-->
+
+    <h1>Contact</h1>
+    <div id="container">
+      <div id="errorMessages"></div>
+      <form action="thanks.html" method="get" name="myContact" onsubmit="return ValidateForm();">
         <fieldset>
-          <legend>Personal Info</legend>
-        <label> Enter First Name</label><br>
-        <input type="text" size="20" name="firstname" value="First Name">
-        <br>
-        <label>Enter Last Name</label><br>
-        <input type="text" size="20" name="lastname" value="Last Name">
-        <br>
-        <label>Enter Email Adress</label><br>
-        <input type="email" size="20" name="emailadress" value="YourEmail@gmail.com">
+
+          <legend>User Information</legend>
+          <label for="firstname">Enter Firstname (Max 20 characters) </label>
+          <br>
+          <input type="text" id="firstname">
+          <br>
+          <label for="lastname">Enter Lastname (Max 50 characters) </label>
+          <br>
+          <input type="text" id="lastname">
+          <br>
+          <label for="email">Enter Email</label>
+          <br>
+          <input type="text" id="email">
+          <br>
         </fieldset>
-        <br><br>
+
         <fieldset>
-        <legend>Contact Prefrences</legend>
-          <input type="checkbox" name="contact_email" value="E"><span class="styleCheck">Email</span><br>
-          <input type="checkbox" name="contact_phone" value="P"><span class="styleCheck">Phone</span><br>
-          <input type="checkbox" name="contact_mail" value="M"><span class="styleCheck">Mail</span><br>
+          <legend>Feel free to add comments</legend>
+          <textarea name="commentbox" id="commentbox" rows="4" cols="50"></textarea>
         </fieldset>
-		<br>
-        <input type="submit" value="Submit">
-      </form> 
-	</div>
-	
-	<footer>
-		<div id="contactme">
-			iced pandas created by coral aviles for PROG109 on <span id="time"></span>.
-		</div>
-	</footer>
-	<script src="date.js"></script>
-</body>
+
+        <br>
+        <input id="submit" type="submit" value="Submit">
+        <input id="cancel" type="submit" value="Cancel">
+      </form>
+    </div>
+
+    <footer>
+      <div id="contactme">
+        iced pandas created by coral aviles for PROG109 on <span id="time"></span>.
+      </div>
+    </footer>
+    <script src="artifact03.js"></script>
+  </body>
