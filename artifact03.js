@@ -1,117 +1,51 @@
-
-function createRhombus(pHeight, pColorEven, pColorOdd, pSymbol) {
-  upLeft(pHeight, pColorEven, pColorOdd, pSymbol);
-  upRight(pHeight, pColorEven, pColorOdd, pSymbol);
-  downLeft(pHeight, pColorEven, pColorOdd, pSymbol);
-  downRight(pHeight, pColorEven, pColorOdd, pSymbol);
-
-}
-
-
-function upLeft(pHeight, pColorEven, pColorOdd, pSymbol){
-  var rLine ="";
-  for (i=1;i<=pHeight;i++){
-    rLine +="<p>";
-
-    //Fill in the left side of every row
-    for(x=1;x<=pHeight-i;x++){
-      rLine +="<span class='space'>" + pSymbol +"</span>";
-    }
-    //Create each line on the Rhombus
-    for(j=x;j<=pHeight;j++){
-
-      //Is the position even or odd so we change the color
-      if (j%2) 
-        //even
-        rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
-      else
-        //odd
-        rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
-
-    }
-    rLine +="</p>";
-    // console.log(rLine);
-
-  }
-
-  document.getElementById("upLeft").innerHTML = rLine;
-}
+function ValidateForm(){
+  var validFirstname = false;
+  var letters = /^[^a-zA-Z]*$/;
+  var validLastname = false;
+  var validEmail = false;
+  var validComment = false;
+  var errorMessages ="";  
 
 
-function upRight(pHeight, pColorEven, pColorOdd, pSymbol){
-  var rLine ="";
-  for (i=0;i<pHeight;i++){
-    rLine +="<p>";
-    //Create each line on the Rhombus
-    for(j=0;j<=i;j++){
+  // FIRST NAME
+  //Required Characters, No More than 20
+  var firstname = document.getElementById("firstname").value;
+  console.log(letters.test(firstname))
+  if (firstname===null || firstname == "" || firstname > 20 || letters.test(firstname))
+    errorMessages = "<p>The first name must be entered or must be under 20 characters</p>";
+  else
+    validFirstname = true;
 
-      //Is the position even or odd so we change the color
-      if (j%2) 
-        //even
-        rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
-      else
-        //odd
-        rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
+  // LAST NAME
+  // Required Characters, No more than 50
+  var lastname = document.getElementById("lastname").value;
+  if(lastname === null || lastname == "" || lastname > 50 || letters.test(firstname))
+    errorMessages += "<p>The last name must be entered or must be under 50 characters</p>";
+  else
+    validLastname = true;
 
-    }
-    rLine +="</p>";
-    // console.log(rLine);
+  // EMAIL
+  // Required Characters, has @ and .
+  var email = document.getElementById("email").value;
+  var atpos = email.indexOf("@");
+  var dotpost = email.indexOf(".");
 
-  }
+  if(atpos<1 || dotpost < atpos + 2 || dotpost + 2 > email.length)
+    errorMessages += "<p>Not a valid email address</p>";
+  else
+    validEmail = true;
+  
+  // COMMENT BOX
+  // Required 
+  var comment = document.getElementById("commentbox").value;
 
-  document.getElementById("upRight").innerHTML = rLine;
-}
+  if(lastname === null || lastname == "")
+    errorMessages += "<p>The comments must be entered</p>";
+  else
+    validComment = true;
 
-function downLeft(pHeight, pColorEven, pColorOdd, pSymbol){
-  var rLine ="";
-  for (i=pHeight;i > 0;i--){
-    rLine +="<p>";
 
-    //Fill in the left side of every row
-    for(x=1;x<=pHeight-i;x++){
-      rLine +="<span class='space'>" + pSymbol +"</span>";
-    }
-
-    //Create each line on the Rhombus
-    for(j=0;j<i;j++){
-
-      //Is the position even or odd so we change the color
-      if (j%2) 
-        //even
-        rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
-      else
-        //odd
-        rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
-
-    }
-    rLine +="</p>";
-    // console.log(rLine);
-
-  }
-
-  document.getElementById("downLeft").innerHTML = rLine;
-}
-
-function downRight(pHeight, pColorEven, pColorOdd, pSymbol){
-  var rLine ="";
-  for (i=pHeight;i > 0;i--){
-    rLine +="<p>";
-    //Create each line on the Rhombus
-    for(j=0;j<i;j++){
-
-      //Is the position even or odd so we change the color
-      if (j%2) 
-        //even
-        rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
-      else
-        //odd
-        rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
-
-    }
-    rLine +="</p>";
-    // console.log(rLine);
-
-  }
-
-  document.getElementById("downRight").innerHTML = rLine;
+  document.getElementById("errorMessages").innerHTML = errorMessages;
+  // Make sure you return all the boolean variables that are checking each field
+  return (validFirstname && validLastname && validEmail && validComment);
 }
